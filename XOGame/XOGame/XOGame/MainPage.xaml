@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XOGame.MainPage">
+
+    <StackLayout>
+        <Grid HorizontalOptions="Center" ColumnSpacing="-4" RowSpacing="-8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="3" Grid.Column="0" x:Name="lblGameStatus"></Label>
+            <Button Grid.Row="4" Grid.Column="0" x:Name="btnRestart" Text="Restart" Clicked="btnRestart_Clicked"/>
+
+            <Button x:Name="Field0" TabIndex="0" Clicked="FieldClicked" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="34"/>
+            <Button x:Name="Field1" TabIndex="1" Clicked="FieldClicked" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="34"/>
+            <Button x:Name="Field2" TabIndex="2" Clicked="FieldClicked" Grid.Row="0" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="34"/>
+
+            <Button x:Name="Field3" TabIndex="3" Clicked="FieldClicked" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="34"/>
+            <Button x:Name="Field4" TabIndex="4" Clicked="FieldClicked" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="34"/>
+            <Button x:Name="Field5" TabIndex="5" Clicked="FieldClicked" Grid.Row="1" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="34"/>
+
+            <Button x:Name="Field6" TabIndex="6" Clicked="FieldClicked" Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="34"/>
+            <Button x:Name="Field7" TabIndex="7" Clicked="FieldClicked" Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="34"/>
+            <Button x:Name="Field8" TabIndex="8" Clicked="FieldClicked" Grid.Row="2" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="34"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
+
