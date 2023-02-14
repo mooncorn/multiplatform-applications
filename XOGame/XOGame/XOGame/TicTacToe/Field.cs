@@ -12,7 +12,7 @@ namespace XOGame
 
         public Field()
 		{
-
+			_sign = Sign.None;
 		}
 
 		public bool IsEmpty()
