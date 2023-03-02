@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Week8_MU6_review_7032.Pages.Question2">
+    <ContentPage.Content>
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Text="Grade Calculator" HorizontalTextAlignment="Center" FontSize="25"/>
+
+            <Frame Grid.Row="1" CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Midterm" FontSize="20"/>
+                    <Slider x:Name="gradeMid" Maximum="100" Minimum="0" ThumbColor="DarkGreen" ValueChanged="gradeMid_ValueChanged"/>
+                    <Label Text="0.0" x:Name="lblMid" FontSize="15"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="2" CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Project" FontSize="20"/>
+                    <Slider x:Name="gradeProject" Maximum="100" Minimum="0" ThumbColor="DarkGreen" ValueChanged="gradeProject_ValueChanged"/>
+                    <Label Text="0.0" x:Name="lblProject" FontSize="15"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="3" CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Final" FontSize="20"/>
+                    <Slider x:Name="gradeFinal" Maximum="100" Minimum="0" ThumbColor="DarkGreen" ValueChanged="gradeFinal_ValueChanged"/>
+                    <Label Text="0.0" x:Name="lblFinal" FontSize="15"/>
+                </StackLayout>
+            </Frame>
+            
+            <Frame Grid.Row="4">
+                <StackLayout>
+                    <Label x:Name="lblGrade" FontSize="20" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="lblStatus" FontSize="20" HorizontalTextAlignment="Center"/>
+                    <ProgressBar x:Name="pbGrade"/>
+                    <Button Text="Calculate" Clicked="Button_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

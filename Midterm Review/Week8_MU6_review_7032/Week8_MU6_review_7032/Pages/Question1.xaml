@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Week8_MU6_review_7032.Pages.Question1">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Spacing="30" Margin="10">
+            <Entry x:Name="txtEmail" Placeholder="Enter the Email to search!"/>
+            <Button Text="Search" Clicked="Button_Clicked"/>
+            <Label x:Name="lblResult" FontSize="30" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

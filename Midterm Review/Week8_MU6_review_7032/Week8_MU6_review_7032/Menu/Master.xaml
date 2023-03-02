@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:week8_mu6_review_7032="clr-namespace:Week8_MU6_review_7032"
+            x:Class="Week8_MU6_review_7032.Menu.Master">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Midterm Review">
+            <StackLayout>
+                <Button Text="Question 1" Clicked="Button_Clicked"/>
+                <Button Text="Question 2" Clicked="Button_Clicked_1"/>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <week8_mu6_review_7032:MainPage/>
+    </FlyoutPage.Detail>
+</FlyoutPage>
