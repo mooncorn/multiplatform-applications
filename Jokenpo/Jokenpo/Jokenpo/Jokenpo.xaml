@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jokenpo.Jokenpo">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Machine Choice" Grid.Column="0" Grid.Row="0" FontSize="24" HorizontalOptions="CenterAndExpand" Grid.ColumnSpan="3"/>
+
+            <Button x:Name="btnMachine" Grid.Row="1" Grid.Column="1" CornerRadius="50" BackgroundColor="Transparent"/>
+
+            <Label Text="Choose your option" FontSize="24" Grid.Row="2" Grid.Column="0" HorizontalOptions="CenterAndExpand" Grid.ColumnSpan="3"/>
+
+            <Button Grid.Row="3" Grid.Column="0" CornerRadius="50" BackgroundColor="Transparent" ImageSource="paper.jpg" Clicked="HandClicked"/>
+            <Button Grid.Row="3" Grid.Column="1" CornerRadius="50" BackgroundColor="Transparent" ImageSource="rock.jpg" Clicked="HandClicked"/>
+            <Button Grid.Row="3" Grid.Column="2" CornerRadius="50" BackgroundColor="Transparent" ImageSource="scissors.jpg" Clicked="HandClicked"/>
+
+            <Label x:Name="lblResult" Grid.Column="0" Grid.Row="4" FontSize="24" HorizontalOptions="CenterAndExpand" Grid.ColumnSpan="3"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
