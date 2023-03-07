@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<FlyoutPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:midtermexam="clr-namespace:MidtermExam"
+    x:Class="MidtermExam.Menu.Master">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Midterm Exam">
+            <StackLayout>
+                <Button Text="Question 1" Clicked="Button_Clicked"/>
+                <Button Text="Question 2" Clicked="Button_Clicked_1"/>
+                <Button Text="Question 3" Clicked="Button_Clicked_2"/>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <midtermexam:MainPage/>
+    </FlyoutPage.Detail>
+</FlyoutPage>
+

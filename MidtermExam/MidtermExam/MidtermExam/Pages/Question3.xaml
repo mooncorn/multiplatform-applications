@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MidtermExam.Pages.Question3">
+    <ContentPage.Content>
+        <Grid BackgroundColor="DarkGray">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" x:Name="lblBmiValue" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" FontSize="32"/>
+
+            <Frame Grid.Row="1" CornerRadius="20" BackgroundColor="White" Padding="20" VerticalOptions="Center">
+                <StackLayout>
+                    <Label Text="HEIGHT" TextColor="DarkGray" FontSize="32"/>
+                    <Label x:Name="lblHeightValue" TextColor="DarkGray" Text="0.0cm"/>
+                    <Slider x:Name="sliderHeight" Maximum="200" Minimum="0.1" ThumbColor="Red" ValueChanged="sliderHeight_ValueChanged"/> 
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="2" CornerRadius="20" BackgroundColor="White" Padding="20" VerticalOptions="Center">
+                <StackLayout>
+                    <Label Text="WEIGHT" TextColor="DarkGray" FontSize="32"/>
+                    <Label x:Name="lblWeightValue" TextColor="DarkGray" Text="0.0cm"/>
+                    <Slider x:Name="sliderWeight" Maximum="200" Minimum="0.1" ThumbColor="Red" ValueChanged="sliderWeight_ValueChanged_1"/> 
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="3" CornerRadius="20" BackgroundColor="White" Padding="0" VerticalOptions="Center">
+                <Button Padding="50" Text="CALCULATE BMI" Clicked="Button_Clicked" BackgroundColor="Yellow"/>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
