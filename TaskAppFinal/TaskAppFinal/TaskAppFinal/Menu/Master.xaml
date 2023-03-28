@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<FlyoutPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:midtermexam="clr-namespace:TaskAppFinal"
+    x:Class="TaskAppFinal.Menu.Master">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Midterm Exam">
+            <StackLayout>
+                <Button Text="Sign Up" Clicked="Button_Clicked"/>
+                <Button Text="Sign In" Clicked="Button_Clicked_1"/>
+                <Button Text="All Users" Clicked="Button_Clicked_2"/>
+                <Button Text="Create Task" Clicked="Button_Clicked_3"/>
+                <Button Text="Get Tasks Created By" Clicked="Button_Clicked_4"/>
+                <Button Text="Get Tasks Assigned To" Clicked="Button_Clicked_5"/>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <midtermexam:MainPage/>
+    </FlyoutPage.Detail>
+</FlyoutPage>
