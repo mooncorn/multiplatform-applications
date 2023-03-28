@@ -11,22 +11,27 @@ namespace TaskAppFinal.Pages
 	{
         private AssignedTask _task;
 
-		public EditTask (AssignedTask task)
+		public EditTask(AssignedTask task)
 		{
 			InitializeComponent ();
             _task = task;
+            TaskUid.Text = task.TaskUid;
 			Description.Text = task.Description;
+            AssignedToName.Text = task.AssignedToName;
+            AssignedToUid.Text = task.AssignedToUid;
+            CreatedByName.Text = task.CreatedByName;
+            CreatedByUid.Text = task.CreatedByUid; 
             SwitchDone.IsToggled = Boolean.Parse(task.Done);
 		}
 
-        async void SwitchDone_PropertyChanged(System.Object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        async void SwitchDone_Toggled(System.Object sender, Xamarin.Forms.ToggledEventArgs e)
         {
-            if (SwitchDone.IsToggled == Boolean.Parse(_task.Done)) return;
+            if (e.Value == Boolean.Parse(_task.Done)) return;
 
             try
             {
-                await AppState.GetInstance().ApiClient.UpdateTask(_task.TaskUid, SwitchDone.IsToggled);
-                _task.Done = SwitchDone.IsToggled.ToString();
+                await AppState.GetInstance().ApiClient.UpdateTask(_task.TaskUid, e.Value);
+                _task.Done = e.Value.ToString();
                 Message.Text = "Task updated successfully";
                 Message.TextColor = Color.Green;
             }

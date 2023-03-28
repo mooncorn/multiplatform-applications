@@ -17,8 +17,10 @@
             <Entry x:Name="CreatedByName" IsReadOnly="True"/>
             <Label Text="CreatedByUid"/>
             <Entry x:Name="CreatedByUid" IsReadOnly="True"/>
-            <Label Text="Done"/>
-            <Switch x:Name="SwitchDone" PropertyChanged="SwitchDone_PropertyChanged"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Done" VerticalOptions="Center"/>
+                <Switch x:Name="SwitchDone" Toggled="SwitchDone_Toggled"/>
+            </StackLayout>
             <Label x:Name="Message"/>
         </StackLayout>
     </ContentPage.Content>

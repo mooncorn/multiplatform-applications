@@ -6,6 +6,7 @@
     <FlyoutPage.Flyout>
         <ContentPage Title="Midterm Exam">
             <StackLayout>
+                <Button Text="Home" Clicked="Button_Clicked_6"/>
                 <Button Text="Sign Up" Clicked="Button_Clicked"/>
                 <Button Text="Sign In" Clicked="Button_Clicked_1"/>
                 <Button Text="All Users" Clicked="Button_Clicked_2"/>
@@ -15,7 +16,4 @@
             </StackLayout>
         </ContentPage>
     </FlyoutPage.Flyout>
-    <FlyoutPage.Detail>
-        <midtermexam:MainPage/>
-    </FlyoutPage.Detail>
 </FlyoutPage>

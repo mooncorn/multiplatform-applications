@@ -10,26 +10,27 @@ namespace TaskAppFinal.Menu
 		public Master ()
 		{
 			InitializeComponent ();
+            Button_Clicked_6(this, null);
 		}
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            Detail = new SignUp();
+            Detail = new NavigationPage(new SignUp());
         }
 
         void Button_Clicked_1(System.Object sender, System.EventArgs e)
         {
-            Detail = new SignIn();
+            Detail = new NavigationPage(new SignIn());
         }
 
         void Button_Clicked_2(System.Object sender, System.EventArgs e)
         {
-            Detail = new AllUsers();
+            Detail = new NavigationPage(new AllUsers());
         }
 
         void Button_Clicked_3(System.Object sender, System.EventArgs e)
         {
-            Detail = new CreateTask();
+            Detail = new NavigationPage(new CreateTask());
         }
 
         void Button_Clicked_4(System.Object sender, System.EventArgs e)
@@ -40,6 +41,11 @@ namespace TaskAppFinal.Menu
         void Button_Clicked_5(System.Object sender, System.EventArgs e)
         {
             Detail = new NavigationPage(new GetTasksAssignedTo());
+        }
+
+        void Button_Clicked_6(System.Object sender, System.EventArgs e)
+        {
+            Detail = new NavigationPage(new MainPage());
         }
     }
 }
