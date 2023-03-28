@@ -4,16 +4,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TaskAppFinal.Pages.EditTask">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Description: "/>
-                <Label x:Name="Description"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Done: " VerticalOptions="Center"/>
-                <CheckBox x:Name="Done"/>
-            </StackLayout>
-            <Button Text="Update" Clicked="Button_Clicked"/>
+        <StackLayout Orientation="Vertical">
+            <Label Text="TaskUid"/>
+            <Entry x:Name="TaskUid" IsReadOnly="True"/>
+            <Label Text="Description"/>
+            <Entry x:Name="Description" IsReadOnly="True"/>
+            <Label Text="AssignedToName"/>
+            <Entry x:Name="AssignedToName" IsReadOnly="True"/>
+            <Label Text="AssignedToUid"/>
+            <Entry x:Name="AssignedToUid" IsReadOnly="True"/>
+            <Label Text="CreatedByName"/>
+            <Entry x:Name="CreatedByName" IsReadOnly="True"/>
+            <Label Text="CreatedByUid"/>
+            <Entry x:Name="CreatedByUid" IsReadOnly="True"/>
+            <Label Text="Done"/>
+            <Switch x:Name="SwitchDone" PropertyChanged="SwitchDone_PropertyChanged"/>
             <Label x:Name="Message"/>
         </StackLayout>
     </ContentPage.Content>

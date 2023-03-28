@@ -9,7 +9,7 @@
             <Label Text="Description"/>
             <Entry x:Name="Description"/>
             <Label Text="Assigned to Uid"/>
-            <Entry x:Name="AssignedToUid"/>
+            <Picker x:Name="AssignedToUser" Title="Select a user" ItemDisplayBinding="{Binding Email}" />
             <Button Text="Create Task" Clicked="Button_Clicked"/>
             <Label x:Name="Message"/>
         </StackLayout>
